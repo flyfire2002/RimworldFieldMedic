@@ -5,6 +5,16 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldMedic", "FieldMedic.csproj", "{38324373-61CA-4B93-A5E2-5337652127BF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About", "About", "{2C94E0FF-0828-4484-A3BC-C2853D0F59BD}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\About\About.xml = ..\..\About\About.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Defs", "Defs", "{4342AB82-4806-42BC-A2A5-49107E88329C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Defs\ThingDefs\Apparel_MedicBag.xml = ..\..\Defs\ThingDefs\Apparel_MedicBag.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
