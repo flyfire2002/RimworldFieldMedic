@@ -1,74 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDef ParentName="ApparelMakeableBase">
-  <defName>Apparel_flyfire2002_MedicBag</defName>
-  <label>medic bag</label>
-  <description>A bag filled with medicines. Wearer can heal downed pawns onspot.</description>
-  <techLevel>Industrial</techLevel>
-  <recipeMaker>
-    <researchPrerequisite>MedicineProduction</researchPrerequisite>
-    <skillRequirements>
-      <Crafting>5</Crafting>
-      <Medicine>4</Medicine>
-    </skillRequirements>
-  </recipeMaker>
-  # TBC
-  <graphicData>
-    <texPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</texPath>
-    <graphicClass>Graphic_Single</graphicClass>
-    <drawSize>0.90</drawSize>
-  </graphicData>
-  <statBases>
-    <WorkToMake>9000</WorkToMake>
-    <MaxHitPoints>200</MaxHitPoints>
-    <Mass>4</Mass>
-    <Flammability>0.6</Flammability>
-    <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
-    <ArmorRating_Blunt>0.36</ArmorRating_Blunt>
-    <ArmorRating_Heat>0.27</ArmorRating_Heat>
-    <Insulation_Cold>1</Insulation_Cold>
-    <EquipDelay>5</EquipDelay>
-  </statBases>
-  <equippedStatOffsets>
-    <MoveSpeed>-0.12</MoveSpeed>
-  </equippedStatOffsets>
-  <thingCategories>
-    <li>Apparel</li>
-  </thingCategories>
-  <costList>
-    <Cloth>30</Cloth>
-    <Steel>60</Steel>
-    <ComponentIndustrial>1</ComponentIndustrial>
-  </costList>
-  <apparel>
-    <bodyPartGroups>
-      <li>Torso</li>
-      <li>Neck</li>
-      <li>Shoulders</li>
-    </bodyPartGroups>
-    <wornGraphicPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</wornGraphicPath>
-    <layers>
-      <li>Middle</li>
-    </layers>
-    <tags>
-      <li>IndustrialMilitaryBasic</li>
-    </tags>
-    <defaultOutfitTags>
-      <li>Soldier</li>
-    </defaultOutfitTags>
-  </apparel>
-  <colorGenerator Class="ColorGenerator_Options">
-    <options>
-      <li>
-        <only>(0.33,0.33,0.33)</only>
-      </li>
-      <li>
-        <only>(0.65,0.65,0.65)</only>
-      </li>
-      <li>
-        <weight>0.5</weight>
-        <min>(0.3,0.3,0.3)</min>
-        <max>(0.5,0.5,0.5)</max>
-      </li>
-    </options>
-  </colorGenerator>
-</ThingDef>
+<Defs>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_flyfire2002_MedicBag</defName>
+    <label>medic bag</label>
+    <description>A bag filled with medicines. Wearer can heal downed pawns onspot.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>MedicineProduction</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+        <Medicine>4</Medicine>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/MedicBag/FlakVest</texPath><!-- Use flak vest as place holder -->
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>3</Mass>
+      <Flammability>0.6</Flammability>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <costList>
+      <Cloth>30</Cloth>
+      <MedicineIndustrial>5</MedicineIndustrial>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <wornGraphicPath>Things/Apparel/MedicBag/FlakVest</wornGraphicPath><!-- Use flak vest as place holder -->
+      <tags>
+        <li>IndustrialMedic</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+</Defs>
