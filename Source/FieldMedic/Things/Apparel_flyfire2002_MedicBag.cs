@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace FieldMedic
 {
-    public class Apparel_flyfire2002_MedicBag : Thing
+    public class Apparel_flyfire2002_MedicBag : Apparel
     {
     }
 }

@@ -34,7 +34,7 @@ namespace FieldMedic
         private const float bleedIncreasePerSec = 0.01f;    // After stabilizing, bleed modifier is increased by this much
         private const float internalBleedOffset = 0.2f;
 
-        private static readonly Texture2D StabilizedIcon = ContentFinder<Texture2D>.Get("UI/Stabilized_Icon");
+        private static readonly Texture2D StabilizedIcon = ContentFinder<Texture2D>.Get("UI/Stabilized_Icon"); // TODO: Actually draw something
 
         private bool stabilized = false;
         private float bleedModifier = 1;
@@ -46,7 +46,6 @@ namespace FieldMedic
             get
             {
                 float mod = bleedModifier;
-                if (parent is Hediff_MissingPart) mod *= 0.5f;
                 if (parent.Part.depth == BodyPartDepth.Inside) mod += internalBleedOffset;
                 return Mathf.Clamp01(mod);
             }
@@ -56,16 +55,18 @@ namespace FieldMedic
         {
             if (stabilized)
             {
-                Log.Error("FieldMedic tried to stabilize an injury that is already stabilized before");
+                Log.Error("FieldMedic tried to stabilize an injury that is already stabilized");
                 return;
             }
             if (medicbag == null)
             {
-                Log.Error("FieldMedic tried to stabilize without medicbag");
+                Log.Error("FieldMedic tried to stabilize without a medicbag");
                 return;
             }
-            float bleedReduction = 2f * medic.GetStatValue(StatDefOf.MedicalTendQuality) * medicbag.GetStatValue(StatDefOf.MedicalPotency);
-            bleedModifier = 1 - bleedReduction; // Especially high treatment quality extends time at 0% bleed by setting bleedModifier to a negative number
+            float bleedReduction = 1.5f * medic.GetStatValue(StatDefOf.MedicalTendQuality);
+            // Especially high treatment quality extends time at 0% bleed by setting bleedModifier to a negative number,
+            // which is then clampped [0, 1] in BleedModifier getter.
+            bleedModifier = 1 - bleedReduction;
             stabilized = true;
         }
 
@@ -84,7 +85,7 @@ namespace FieldMedic
                 if (bleedModifier >= 1)
                 {
                     bleedModifier = 1;
-                    //stabilized = false;
+                    stabilized = false;
                 }
             }
         }

@@ -7,7 +7,9 @@ using Verse;
 using UnityEngine;
 using Harmony;
 
-namespace FieldMedic.Harmony
+// Modified from the same named file from Combat Extended, under CC-BY-NC-SA-4.0.
+
+namespace FieldMedic
 {
     static class Harmony_HediffWithComps_BleedRate_Patch
     {
@@ -20,6 +22,8 @@ namespace FieldMedic.Harmony
                 if (comp != null)
                 {
                     __result = __result * (comp.BleedModifier);
+                    // Force update total bleeding rate. Why would the cache take multi-ingame-hours to refresh?
+                    __instance.pawn.health.hediffSet.DirtyCache();
                 }
             }
         }

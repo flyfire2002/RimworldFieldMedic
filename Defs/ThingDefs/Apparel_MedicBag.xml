@@ -13,7 +13,7 @@
       </skillRequirements>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Apparel/MedicBag/FlakVest</texPath><!-- Use flak vest as place holder -->
+      <texPath>Things/Apparel/MedicBag/FlakVest</texPath><!-- // TODO: Actually draw something -->
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.90</drawSize>
     </graphicData>
@@ -22,9 +22,9 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>3</Mass>
       <Flammability>0.6</Flammability>
-      <MedicalPotency>1.00</MedicalPotency>
       <EquipDelay>1.5</EquipDelay>
     </statBases>
+    <thingClass>FieldMedic.Apparel_flyfire2002_MedicBag</thingClass>
     <thingCategories>
       <li>Apparel</li>
     </thingCategories>
@@ -41,7 +41,7 @@
       <layers>
         <li>Belt</li>
       </layers>
-      <wornGraphicPath>Things/Apparel/MedicBag/FlakVest</wornGraphicPath><!-- Use flak vest as place holder -->
+      <wornGraphicPath>Things/Apparel/MedicBag/FlakVest</wornGraphicPath><!-- // TODO: Actually draw something -->
       <tags>
         <li>IndustrialMedic</li>
       </tags>

@@ -6,24 +6,30 @@ using System.Reflection.Emit;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace FieldMedic.Harmony
+// Modified from the same named file from Combat Extended, under CC-BY-NC-SA-4.0.
+
+namespace FieldMedic
 {
+    [StaticConstructorOnStartup]
     public static class HarmonyBase
     {
-        private static HarmonyInstance harmony = null;
-        static internal HarmonyInstance instance
+        static HarmonyBase()
         {
-            get
-            {
-                if (harmony == null)
-                    harmony = harmony = HarmonyInstance.Create("FieldMedic.Harmony");
-                return harmony;
-            }
+            var harmonyInstance = HarmonyInstance.Create("FieldMedic");
+            harmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
+            PatchHediffWithComps(harmonyInstance);
+            Log.Message("FieldMedic inited");
         }
 
-        public static void InitPatches()
+        private static void PatchHediffWithComps(HarmonyInstance harmonyInstance)
         {
-            instance.PatchAll(Assembly.GetExecutingAssembly());
+            var postfixBleedRate = typeof(Harmony_HediffWithComps_BleedRate_Patch).GetMethod("Postfix");
+            var baseType = typeof(HediffWithComps);
+            var types = baseType.AllSubclassesNonAbstract().Add(baseType);
+            foreach (Type cur in types)
+            {
+                harmonyInstance.Patch(cur.GetProperty("BleedRate").GetGetMethod(), null, new HarmonyMethod(postfixBleedRate));
+            }
         }
     }
 }

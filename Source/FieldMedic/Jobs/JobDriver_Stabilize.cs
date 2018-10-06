@@ -33,8 +33,7 @@ namespace FieldMedic
                 if (Patient.health.hediffSet.GetHediffsTendable().Any(h => h.CanBeStabilized())) return JobCondition.Ongoing;
                 return JobCondition.Incompletable;
             });
-
-            // Pick up medicine and haul to patient
+            
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
 
             // Stabilize patient
@@ -52,6 +51,12 @@ namespace FieldMedic
                     {
                         HediffComp_Stabilize comp = curInjury.TryGetComp<HediffComp_Stabilize>();
                         comp.Stabilize(pawn, MedicBag);
+                        // The idea is to limit the use of the bag. You can use it below 50%, but heed the mood debuff.
+                        MedicBag.HitPoints = MedicBag.HitPoints - (int)(MedicBag.MaxHitPoints * 0.05f);
+                        if (MedicBag.HitPoints <= 0)
+                        {
+                            MedicBag.Destroy();
+                        }
                         break;
                     }
                 }
