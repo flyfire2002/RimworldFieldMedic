@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
-using UnityEngine;
+using Verse.AI;
 
 namespace FieldMedic
 {
-    public class Apparel_flyfire2002_MedicBag
+    [DefOf]
+    public static class FieldMedic_JobDefOf
     {
+        public static JobDef Stabilize;
     }
 }

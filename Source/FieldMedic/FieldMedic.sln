@@ -13,6 +13,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Defs", "Defs", "{4342AB82-4806-42BC-A2A5-49107E88329C}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\Defs\ThingDefs\Apparel_MedicBag.xml = ..\..\Defs\ThingDefs\Apparel_MedicBag.xml
+		..\..\Defs\JobDefs\Jobs_FieldMedic.xml = ..\..\Defs\JobDefs\Jobs_FieldMedic.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patches", "Patches", "{56F8E260-C2F0-4937-BE49-F0BD9B13CC0E}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Patches\Core\HediffDefs\Hediffs_Local_Injuries.xml = ..\..\Patches\Core\HediffDefs\Hediffs_Local_Injuries.xml
 	EndProjectSection
 EndProject
 Global

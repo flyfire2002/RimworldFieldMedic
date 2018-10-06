@@ -30,6 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony, Version=1.0.9.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -46,9 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apparel_flyfire2002_MedicBag.cs" />
+    <Compile Include="Comps\HediffCompProperties_Stabilize.cs" />
+    <Compile Include="Comps\HediffComp_Stabilize.cs" />
+    <Compile Include="DefOfs\FieldMedic_JobDefOf.cs" />
+    <Compile Include="Harmony\Harmony-HediffWithComps.cs" />
+    <Compile Include="Harmony\Harmony-FloatMenuMakerMap.cs" />
+    <Compile Include="Harmony\HarmonyBase.cs" />
+    <Compile Include="Jobs\JobDriver_Stabilize.cs" />
+    <Compile Include="Things\Apparel_flyfire2002_MedicBag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

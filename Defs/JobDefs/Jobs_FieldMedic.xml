@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Modified from Combat Extended Defs/JobDefs/Jobs_CE.xml, under CC-BY-NC-SA-4.0. -->
+<Defs>
+  <JobDef>
+    <defName>Stabilize</defName>
+    <driverClass>FieldMedic.JobDriver_Stabilize</driverClass>
+    <reportString>Stabilizing.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+</Defs>

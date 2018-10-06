@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Modified from Combat Extended Sources/.../Patches/Core/HediffDefs/Hediffs_Local_Injuries.xml, under CC-BY-NC-SA-4.0.-->
+<Patch>
+  <!-- Add CompStabilize to all injury and missing part hediffs -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>*/HediffDef[defName = "MissingBodyPart"]/comps</xpath>
+    <value>
+      <li Class="FieldMedic.HediffCompProperties_Stabilize" />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>*/HediffDef[@Name="InjuryBase"]</xpath>
+    <value>
+      <comps>
+        <li Class="FieldMedic.HediffCompProperties_Stabilize" />
+      </comps>
+    </value>
+  </Operation>
+</Patch>
