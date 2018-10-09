@@ -34,7 +34,14 @@ namespace FieldMedic
         private const float bleedIncreasePerSec = 0.01f;    // After stabilizing, bleed modifier is increased by this much
         private const float internalBleedOffset = 0.2f;
 
-        private static readonly Texture2D StabilizedIcon = ContentFinder<Texture2D>.Get("UI/Stabilized_Icon"); // TODO: Actually draw something
+        // Use ReductionLeft / Reduction to decide which icon to display.
+        private float bleedReduction;
+        private float bleedReductionLeft;
+
+        private static readonly Texture2D Stabilized100Icon = ContentFinder<Texture2D>.Get("UI/Stabilized_icon_100");
+        private static readonly Texture2D Stabilized75Icon = ContentFinder<Texture2D>.Get("UI/Stabilized_icon_75");
+        private static readonly Texture2D Stabilized50Icon = ContentFinder<Texture2D>.Get("UI/Stabilized_icon_50");
+        private static readonly Texture2D Stabilized25Icon = ContentFinder<Texture2D>.Get("UI/Stabilized_icon_25");
 
         private bool stabilized = false;
         private float bleedModifier = 1;
@@ -63,7 +70,8 @@ namespace FieldMedic
                 Log.Error("FieldMedic tried to stabilize without a medicbag");
                 return;
             }
-            float bleedReduction = 1.5f * medic.GetStatValue(StatDefOf.MedicalTendQuality);
+            bleedReduction = 1.5f * medic.GetStatValue(StatDefOf.MedicalTendQuality);
+            bleedReductionLeft = bleedReduction;
             // Especially high treatment quality extends time at 0% bleed by setting bleedModifier to a negative number,
             // which is then clampped [0, 1] in BleedModifier getter.
             bleedModifier = 1 - bleedReduction;
@@ -81,7 +89,8 @@ namespace FieldMedic
             // Increase bleed modifier once per second
             if (stabilized && bleedModifier < 1 && parent.ageTicks % 60 == 0)
             {
-                bleedModifier = bleedModifier + bleedIncreasePerSec;
+                bleedModifier += bleedIncreasePerSec;
+                bleedReductionLeft -= bleedIncreasePerSec;
                 if (bleedModifier >= 1)
                 {
                     bleedModifier = 1;
@@ -94,7 +103,22 @@ namespace FieldMedic
         {
             get
             {
-                if (bleedModifier < 1 && !parent.IsPermanent() && !parent.IsTended()) return new TextureAndColor(StabilizedIcon, Color.white);
+                if (bleedModifier < 1 && !parent.IsPermanent() && !parent.IsTended())
+                {
+                    if (bleedReductionLeft / bleedReduction > 0.75f) {
+                        return new TextureAndColor(Stabilized100Icon, Color.white);
+                    }
+                    if (bleedReductionLeft / bleedReduction > 0.5f)
+                    {
+                        return new TextureAndColor(Stabilized75Icon, Color.white);
+                    }
+                    if (bleedReductionLeft / bleedReduction > 0.25f)
+                    {
+                        return new TextureAndColor(Stabilized50Icon, Color.white);
+                    }
+                    return new TextureAndColor(Stabilized25Icon, Color.white);
+
+                }
                 return TextureAndColor.None;
             }
         }
