@@ -3,7 +3,7 @@
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Apparel_flyfire2002_MedicBag</defName>
     <label>medic bag</label>
-    <description>A bag filled with medicines. Wearer can heal downed pawns onspot.</description>
+    <description>A bag filled with medicines. Wearer can stabilize downed pawns so that there is more time to move the pawn to proper facilities.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <researchPrerequisite>MedicineProduction</researchPrerequisite>
@@ -31,10 +31,10 @@
     <costList>
       <Cloth>30</Cloth>
       <MedicineIndustrial>5</MedicineIndustrial>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <apparel>
-      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfWornByCorpse>true</careIfWornByCorpse>
       <bodyPartGroups>
         <li>Torso</li>
       </bodyPartGroups>
