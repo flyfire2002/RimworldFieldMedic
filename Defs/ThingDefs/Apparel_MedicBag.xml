@@ -13,7 +13,7 @@
       </skillRequirements>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Apparel/MedicBag/FlakVest</texPath><!-- // TODO: Actually draw something -->
+      <texPath>Things/Apparel/MedicBag/MedicBag</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.90</drawSize>
     </graphicData>
@@ -41,7 +41,7 @@
       <layers>
         <li>Belt</li>
       </layers>
-      <wornGraphicPath>Things/Apparel/MedicBag/FlakVest</wornGraphicPath><!-- // TODO: Actually draw something -->
+      <wornGraphicPath>Things/Apparel/MedicBag/MedicBag</wornGraphicPath>
       <tags>
         <li>IndustrialMedic</li>
       </tags>
