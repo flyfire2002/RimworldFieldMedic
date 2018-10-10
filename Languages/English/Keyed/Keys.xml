@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <FieldMedic_CannotStabilize>Cannot stabilize</FieldMedic_CannotStabilize>
+  <FieldMedic_NoMedicBag>{0} is not wearing a medic bag</FieldMedic_NoMedicBag>
+  <FieldMedic_Stabilize>Stabilize</FieldMedic_Stabilize>
+</LanguageData>
