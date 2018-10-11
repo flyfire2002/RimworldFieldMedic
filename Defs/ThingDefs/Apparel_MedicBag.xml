@@ -21,6 +21,7 @@
       <WorkToMake>8000</WorkToMake>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>3</Mass>
+      <MarketValue>425.0</MarketValue>
       <Flammability>0.6</Flammability>
       <EquipDelay>1.5</EquipDelay>
     </statBases>
@@ -32,7 +33,10 @@
       <Cloth>30</Cloth>
       <MedicineIndustrial>5</MedicineIndustrial>
       <ComponentIndustrial>2</ComponentIndustrial>
-    </costList>
+    </costList>    
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
     <apparel>
       <careIfWornByCorpse>true</careIfWornByCorpse>
       <bodyPartGroups>
