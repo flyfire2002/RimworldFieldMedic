@@ -49,6 +49,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JobDefs", "JobDefs", "{1C3C
 		..\..\Languages\ChineseSimplified\DefInjected\JobDefs\Jobs_FieldMedic.xml = ..\..\Languages\ChineseSimplified\DefInjected\JobDefs\Jobs_FieldMedic.xml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ChineseTraditional", "ChineseTraditional", "{C4740C61-49EB-463B-AE91-EB295FD38216}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Keyed", "Keyed", "{44B363E2-6735-450A-8529-69BC128723C5}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Languages\ChineseTraditional\Keyed\Keys.xml = ..\..\Languages\ChineseTraditional\Keyed\Keys.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DefInjected", "DefInjected", "{46462EF7-AAD6-408F-856D-A3D38EAA6FEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JobDefs", "JobDefs", "{EA201165-D46C-4136-9FE1-59C53457E450}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Languages\ChineseTraditional\DefInjected\JobDefs\Jobs_FieldMedic.xml = ..\..\Languages\ChineseTraditional\DefInjected\JobDefs\Jobs_FieldMedic.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThingDefs", "ThingDefs", "{9DAB7040-D7FE-4BF8-B6C8-0E4BA31B2377}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Languages\ChineseTraditional\DefInjected\ThingDefs\Apparel_MedicBag.xml = ..\..\Languages\ChineseTraditional\DefInjected\ThingDefs\Apparel_MedicBag.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,5 +90,10 @@ Global
 		{EF5B24B6-04A1-422F-AAB5-28A8F430454B} = {66BD7D15-252A-4743-ACC1-83A495571624}
 		{DB4746AB-5438-430F-BDF3-2E74F319B42D} = {EF5B24B6-04A1-422F-AAB5-28A8F430454B}
 		{1C3C14F7-B10D-46EE-BED9-21567F841EB0} = {EF5B24B6-04A1-422F-AAB5-28A8F430454B}
+		{C4740C61-49EB-463B-AE91-EB295FD38216} = {F19B0847-DDCF-497E-8C25-93CC81D7EE0A}
+		{44B363E2-6735-450A-8529-69BC128723C5} = {C4740C61-49EB-463B-AE91-EB295FD38216}
+		{46462EF7-AAD6-408F-856D-A3D38EAA6FEE} = {C4740C61-49EB-463B-AE91-EB295FD38216}
+		{EA201165-D46C-4136-9FE1-59C53457E450} = {46462EF7-AAD6-408F-856D-A3D38EAA6FEE}
+		{9DAB7040-D7FE-4BF8-B6C8-0E4BA31B2377} = {46462EF7-AAD6-408F-856D-A3D38EAA6FEE}
 	EndGlobalSection
 EndGlobal
