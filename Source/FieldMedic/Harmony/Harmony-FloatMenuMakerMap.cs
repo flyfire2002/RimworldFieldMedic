@@ -32,20 +32,18 @@ namespace FieldMedic.Harmony
                     {
                         if (pawn.story.WorkTypeIsDisabled(WorkTypeDefOf.Doctor))
                         {
-                            // TODO
-                            opts.Add(new FloatMenuOption("FieldMedic_CannotStabilize".Translate() + ": " + "IncapableOfCapacity".Translate(WorkTypeDefOf.Doctor.gerundLabel), null, MenuOptionPriority.Default));
+                            opts.Add(new FloatMenuOption("FieldMedic_CannotStabilize".Translate() + " (" + "IncapableOfCapacity".Translate(WorkTypeDefOf.Doctor.gerundLabel) + ")", null, MenuOptionPriority.Default));
                             return;
                         }
 
                         Apparel medicbagApparel = (Apparel)pawn.apparel.WornApparel.Find(t => t is Apparel_flyfire2002_MedicBag);
                         if (medicbagApparel == null || !(medicbagApparel is Apparel_flyfire2002_MedicBag))
                         {
-                            // TODO
-                            opts.Add(new FloatMenuOption("FieldMedic_NoMedicBag".Translate(), null, MenuOptionPriority.Default));
+                            opts.Add(new FloatMenuOption("FieldMedic_CannotStabilize".Translate() + " (" + "FieldMedic_NoMedicBag".Translate() + ")", null, MenuOptionPriority.Default));
                             return;
                         }
 
-                        string label = "FieldMedic_Stabilize".Translate(patient.LabelCap); // TODO
+                        string label = "FieldMedic_Stabilize".Translate(patient.LabelCap);
                         Action action = delegate
                         {
                             var medicbag = (Apparel_flyfire2002_MedicBag)medicbagApparel;

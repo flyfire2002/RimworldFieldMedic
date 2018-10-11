@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   <FieldMedic_CannotStabilize>无法临时包扎</FieldMedic_CannotStabilize>
-  <FieldMedic_NoMedicBag>{0}并未穿着急救包</FieldMedic_NoMedicBag>
+  <FieldMedic_NoMedicBag>未穿着急救包</FieldMedic_NoMedicBag>
   <FieldMedic_Stabilize>临时包扎</FieldMedic_Stabilize>
-
-  <Apparel_flyfire2002_MedicBag.label>急救包</Apparel_flyfire2002_MedicBag.label>
-  <Apparel_flyfire2002_MedicBag.description>一个装满了药品的包。装备了急救包的殖民者可以为倒下了的流血中的人物做临时包扎。</Apparel_flyfire2002_MedicBag.description>
 </LanguageData>
