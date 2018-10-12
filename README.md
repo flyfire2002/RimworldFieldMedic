@@ -4,6 +4,7 @@ The patch expires after a while, so you still need to give the pawn more formal 
 
 ## Credits
 Most code are ported from [NoImageAvailable/CombatExtended](https://github.com/NoImageAvailable/CombatExtended), so great thanks to NoImageAvailable for releasing his code under CC-BY-NC-SA-4.0.
+
 I used Chicken Pluckster's [Outfit Creation Kit](https://steamcommunity.com/sharedfiles/filedetails/?id=1114369188) to create the Medic Bag sprite. Thank you CP, the templates are super useful.
  
 ## How it works?
@@ -27,6 +28,7 @@ As mentioned above, CC-BY-NC-SA-4.0. Mention both NoImageAvailable and me :)
 
 ## 鸣谢
 本模组大多数的代码是移植自[NoImageAvailable的CombatExtended](https://github.com/NoImageAvailable/CombatExtended)。特此鸣谢NoImageAvailable将其代码以CC-BY-NC-SA-4.0授权公开。
+
 Chicken Pluckster的[Outfit Creation Kit](https://steamcommunity.com/sharedfiles/filedetails/?id=1114369188)对我创作急救包的图像带来了莫大的帮助，特此鸣谢。
 
 ## 游戏内机制
