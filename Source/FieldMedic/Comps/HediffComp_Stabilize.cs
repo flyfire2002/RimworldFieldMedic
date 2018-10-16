@@ -8,6 +8,12 @@ using UnityEngine;
 
 // Modified from the same named file from Combat Extended, under CC-BY-NC-SA-4.0.
 
+// This file has two logical parts. The first part is the FieldMedic_Util class that defines
+// CanBeStabilized() function, determining whether a Hediff (injury) is stabilizable.
+// The second part is HediffComp_Stabilize, the modifier for an injury. This class is triggered
+// after an stabilize job actually begins. It contains internal math of how much bleeding to surpress,
+// how fast the bleeding resumes, and what icon to display for the stabilized effect.
+
 namespace FieldMedic
 {
     static class FieldMedic_Util
@@ -32,7 +38,7 @@ namespace FieldMedic
     public class HediffComp_Stabilize : HediffComp
     {
         private const float bleedIncreasePerSec = 0.01f;    // After stabilizing, bleed modifier is increased by this much
-        private const float internalBleedOffset = 0.2f;
+        private const float internalBleedOffset = 0.3f;
 
         // Use ReductionLeft / Reduction to decide which icon to display.
         private float bleedReduction;
@@ -70,11 +76,17 @@ namespace FieldMedic
                 Log.Error("FieldMedic tried to stabilize without a medicbag");
                 return;
             }
-            bleedReduction = 1.5f * medic.GetStatValue(StatDefOf.MedicalTendQuality);
-            bleedReductionLeft = bleedReduction;
+            bleedReduction = 1.0f - 0.8f * medic.GetStatValue(StatDefOf.MedicalTendQuality);
             // Especially high treatment quality extends time at 0% bleed by setting bleedModifier to a negative number,
-            // which is then clampped [0, 1] in BleedModifier getter.
-            bleedModifier = 1 - bleedReduction;
+            // which is then clampped [0, 1] in BleedModifier getter. However, the overflow is diminished by half.
+            if (bleedReduction < 0)
+            {
+                bleedReduction /= 2;
+            }
+            bleedModifier = bleedReduction;
+            // Now we get the "real" bleed reduction amount, and set the numerator for the icon fullness.
+            bleedReduction = 1.0f - bleedModifier;
+            bleedReductionLeft = bleedReduction;
             stabilized = true;
         }
 
