@@ -37,7 +37,7 @@ namespace FieldMedic
     [StaticConstructorOnStartup]
     public class HediffComp_Stabilize : HediffComp
     {
-        private const float bleedIncreasePerSec = 0.01f;    // After stabilizing, bleed modifier is increased by this much
+        private const float bleedIncreasePerSec = 0.0075f;    // After stabilizing, bleed modifier is increased by this much
         private const float internalBleedOffset = 0.3f;
 
         // Use ReductionLeft / Reduction to decide which icon to display.
