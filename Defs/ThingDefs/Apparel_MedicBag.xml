@@ -24,6 +24,7 @@
       <MarketValue>425.0</MarketValue>
       <Flammability>0.6</Flammability>
       <EquipDelay>1.5</EquipDelay>
+      <DeteriorationRate>1</DeteriorationRate>
     </statBases>
     <thingClass>FieldMedic.Apparel_flyfire2002_MedicBag</thingClass>
     <thingCategories>
