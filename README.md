@@ -18,7 +18,7 @@ I used Chicken Pluckster's [Outfit Creation Kit](https://steamcommunity.com/shar
   * It occupies waist layer, covering the torso, thus it shouldn't conflict with most apparels.
 * The pawn needs to be downed, not in a bed, and is bleeding to be stabilized by a Medic-Bag-wearing pawn.
   * The helper's medical tend quality affects how effective the stabilization is.
-* Stabilizing each bleeding part costs 5% of the bag. The bag can cause "Tattered apparel" just like any other apparels.
+* Stabilizing each bleeding part costs 3-8% of the bag, depends on the original amount of bleeding. The bag can cause "Tattered apparel" just like any other apparels.
  
 ## License
 As mentioned above, CC-BY-NC-SA-4.0. Mention both NoImageAvailable and me :)
@@ -42,7 +42,7 @@ Chicken Pluckster的[Outfit Creation Kit](https://steamcommunity.com/sharedfiles
   * 急救包占用配件格，覆盖躯干，因此可以与所有原版衣物同时装备。
 * 临时包扎的对象为倒地的、不在病床上的、流血中的人物
   * 临时包扎的有效程度取决于施救者的医疗水平
-* 每包扎一处出血，急救包便会损失5%的HP。如同其他任何衣物，HP低于50%会导致“穿着磨损的衣服”的debuff。
+* 每包扎一处出血，急救包便会依伤口原本的出血速度损失3-8%的HP。如同其他任何衣物，HP低于50%会导致“穿着磨损的衣服”的debuff。
 
 ## 授权
 如上文所述，本模组以CC-BY-NC-SA-4.0授权公开。
