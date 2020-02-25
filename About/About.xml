@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Field Medic [1.0]</name>
+  <packageId>Flyfire2002.FieldMedic</packageId>
+  <name>Field Medic [1.0+]</name>
   <author>flyfire2002</author>
-  <targetVersion>1.0.2059</targetVersion>
+  <supportedVersions>
+    <li>1.0</li>
+    <li>1.1</li>
+  </supportedVersions>
   <description>
 This mod adds the functionality to stabilize bleeding pawns so that you buy time to move pawns to more formal medical facilities.
   </description>
