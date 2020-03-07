@@ -42,6 +42,7 @@
       <careIfWornByCorpse>true</careIfWornByCorpse>
       <bodyPartGroups>
         <li>Torso</li>
+        <li>Shoulders</li>
       </bodyPartGroups>
       <layers>
         <li>Belt</li>
