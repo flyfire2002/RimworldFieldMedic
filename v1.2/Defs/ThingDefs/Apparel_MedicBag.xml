@@ -48,6 +48,68 @@
         <li>Belt</li>
       </layers>
       <wornGraphicPath>Things/Apparel/MedicBag/MedicBag</wornGraphicPath>
+      <!-- Thanks to steam user doc776 for providing the following fix that
+           deals with the huge bag render glitch with RW 1.2. -->
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <offset>(-0.15,-0.25)</offset>
+          <hulk>
+            <offset>(-0.0,-0.15)</offset>
+          </hulk>
+          <fat>
+            <offset>(-0.0,-0.0)</offset>
+          </fat>
+          <thin>
+            <offset>(0.10,-0.0)</offset>
+          </thin>
+        </north>
+        <south>
+          <offset>(0.15,-0.20)</offset>
+          <hulk>
+            <offset>(-0.0,-0.10)</offset>
+          </hulk>
+          <fat>
+            <offset>(0.1,-0.0)</offset>
+          </fat>
+          <thin>
+            <offset>(-0.10,-0.0)</offset>
+          </thin>
+        </south>
+        <east>
+          <offset>(-0.15,-0.25)</offset>
+          <hulk>
+            <offset>(-0.0,-0.15)</offset>
+          </hulk>
+          <fat>
+            <offset>(-0.10,-0.10)</offset>
+          </fat>
+        </east>
+        <west>
+          <offset>(0.15,-0.25)</offset>
+          <hulk>
+            <offset>(-0.0,-0.15)</offset>
+          </hulk>
+          <fat>
+            <offset>(-0.0,-0.10)</offset>
+          </fat>
+        </west>
+        <male>
+          <scale>(0.4,0.4)</scale>
+        </male>
+        <female>
+          <scale>(0.4,0.4)</scale>
+        </female>
+        <thin>
+          <scale>(0.4,0.4)</scale>
+        </thin>
+        <hulk>
+          <scale>(0.5,0.5)</scale>
+        </hulk>
+        <fat>
+          <scale>(0.5,0.5)</scale>
+        </fat>
+      </wornGraphicData>
       <tags>
         <li>IndustrialMedic</li>
       </tags>
