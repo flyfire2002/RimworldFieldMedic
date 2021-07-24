@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  <FieldMedic_CannotStabilize>无法临时包扎</FieldMedic_CannotStabilize>
+  <FieldMedic_CannotStabilize>无法使用急救包临时包扎</FieldMedic_CannotStabilize>
   <FieldMedic_NoMedicBag>未穿着急救包</FieldMedic_NoMedicBag>
-  <FieldMedic_Stabilize>临时包扎</FieldMedic_Stabilize>
+  <FieldMedic_Stabilize>使用急救包临时包扎</FieldMedic_Stabilize>
 </LanguageData>

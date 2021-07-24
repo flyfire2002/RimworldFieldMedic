@@ -16,7 +16,7 @@ namespace FieldMedic
         static HarmonyBase()
         {
             var harmonyInstance = new Harmony("FieldMedic");
-            harmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
+            harmonyInstance.PatchAll();
             PatchHediffWithComps(harmonyInstance);
             Log.Message("[FieldMedic] inited");
         }

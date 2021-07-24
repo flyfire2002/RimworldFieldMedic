@@ -16,7 +16,7 @@ namespace FieldMedic
 {
     public class JobDriver_Stabilize : JobDriver
     {
-        private const float baseTendDuration = 60f;
+        private const float baseTendDuration = 64f;
 
         private Pawn Patient { get { return pawn.CurJob.targetA.Thing as Pawn; } }
         private Apparel_flyfire2002_MedicBag MedicBag { get { return pawn.CurJob.targetB.Thing as Apparel_flyfire2002_MedicBag; } }
