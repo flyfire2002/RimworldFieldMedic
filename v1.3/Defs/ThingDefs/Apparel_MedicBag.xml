@@ -14,8 +14,9 @@
     </recipeMaker>
     <graphicData>
       <texPath>Things/Apparel/MedicBag/MedicBag</texPath>
+      <shaderType>CutoutComplex</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
-      <!--<color>(94, 96, 103)</color> <!- Ayeeeeee Grey -->
+      <color>(94, 96, 103)</color> <!-- Ayeeeeee 94, 96, 103 for Grey -->
       <drawSize>0.90</drawSize>
     </graphicData>
     <statBases>
@@ -35,7 +36,7 @@
       <Cloth>30</Cloth>
       <MedicineIndustrial>5</MedicineIndustrial>
       <ComponentIndustrial>2</ComponentIndustrial>
-    </costList>    
+    </costList>
     <comps Inherit="False">
       <li Class="CompProperties_Forbiddable"/>
       <li>
@@ -52,6 +53,7 @@
         <li>Belt</li>
       </layers>
       <wornGraphicPath>Things/Apparel/MedicBag/MedicBag</wornGraphicPath>
+      <useWornGraphicMask>true</useWornGraphicMask>
       <!-- Thanks to steam user doc776 for providing the following fix that
            deals with the huge bag render glitch with RW 1.2. -->
       <wornGraphicData>
