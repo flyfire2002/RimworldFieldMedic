@@ -80,7 +80,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{38324373-61CA-4B93-A5E2-5337652127BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38324373-61CA-4B93-A5E2-5337652127BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38324373-61CA-4B93-A5E2-5337652127BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38324373-61CA-4B93-A5E2-5337652127BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
@@ -100,5 +99,20 @@ Global
 		{46462EF7-AAD6-408F-856D-A3D38EAA6FEE} = {C4740C61-49EB-463B-AE91-EB295FD38216}
 		{EA201165-D46C-4136-9FE1-59C53457E450} = {46462EF7-AAD6-408F-856D-A3D38EAA6FEE}
 		{9DAB7040-D7FE-4BF8-B6C8-0E4BA31B2377} = {46462EF7-AAD6-408F-856D-A3D38EAA6FEE}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.scope = text/x-csharp
+		$0.TextStylePolicy = $4
+		$4.FileWidth = 80
+		$4.TabsToSpaces = True
+		$4.scope = text/plain
+		$0.StandardHeader = $5
 	EndGlobalSection
 EndGlobal
