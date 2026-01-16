@@ -13,7 +13,7 @@
       </skillRequirements>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Apparel/MedicBag/MedicBag</texPath>
+      <texPath>Things/Apparel/flyfire2002_MedicBag/MedicBag</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.90</drawSize>
     </graphicData>
@@ -47,7 +47,7 @@
       <layers>
         <li>Belt</li>
       </layers>
-      <wornGraphicPath>Things/Apparel/MedicBag/MedicBag</wornGraphicPath>
+      <wornGraphicPath>Things/Apparel/flyfire2002_MedicBag/MedicBag</wornGraphicPath>
       <!-- Thanks to steam user doc776 for providing the following fix that
            deals with the huge bag render glitch with RW 1.2. -->
       <wornGraphicData>
